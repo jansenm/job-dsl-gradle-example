@@ -2,6 +2,7 @@
 build/
 target/
 out/
+reference/
 *.iml
 .idea
 .DS_Store
