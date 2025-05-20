@@ -62,8 +62,8 @@ very-clean-do:
 ## maintainer-clean         clean build-results, reference and cache
 maintainer-clean: maintainer-clean-before clean-do very-clean-do maintainer-clean-do reference maintainer-clean-after
 maintainer-clean-do:
-	@echo "  ~# rm -rf .gradle/"
-	rm -rf .gradle
+	@echo "  ~# rm -rf .gradle/ target/"
+	rm -rf .gradle/ target/
 
 ##
 ## HELPER
