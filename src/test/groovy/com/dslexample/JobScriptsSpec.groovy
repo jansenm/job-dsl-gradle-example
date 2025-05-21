@@ -3,11 +3,7 @@ package com.dslexample
 import com.dslexample.support.TestUtil
 import hudson.model.Item
 import hudson.model.View
-import javaposse.jobdsl.dsl.DslScriptLoader
-import javaposse.jobdsl.dsl.GeneratedItems
-import javaposse.jobdsl.dsl.GeneratedJob
-import javaposse.jobdsl.dsl.GeneratedView
-import javaposse.jobdsl.dsl.JobManagement
+import javaposse.jobdsl.dsl.*
 import javaposse.jobdsl.plugin.JenkinsJobManagement
 import jenkins.model.Jenkins
 import org.junit.ClassRule
@@ -31,6 +27,7 @@ class JobScriptsSpec extends Specification {
     private File outputDir = new File('./build/debug-xml')
 
     def setupSpec() {
+        jenkinsRule.jenkins.doQuietDown()
         outputDir.deleteDir()
     }
 
