@@ -37,11 +37,11 @@ diff: diff-before test show-diff diff-after
 show-diff:
 	$(DIFF) build/debug-xml/ reference/
 
-## checkpoint               ~# cp build/debug.xml reference
+## checkpoint               ~# cp build/debug-xm/
 checkpoint: checkpoint-before reference checkpoint-do checkpoint-after
 checkpoint-do: reference
 	@echo "  sync build-results to reference"
-	rsync --verbose --archive build/debug-xml/. reference/.
+	rsync --verbose --archive --delete build/debug-xml/. reference/.
 
 ##
 ## CLEANUP
